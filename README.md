@@ -16,7 +16,7 @@ you can do with the standard WinRT API in C# is very likely to work here also (u
 # Caveats
 - The anchor tags, if you use a fairly simple  navigation strategy like `<a route-href="route: home">Home</a>`, this will cause the window to reload even if the route is being managed by an aurelia route binding, so to replace that I used a `navigate(route)` method that uses the same aurelia router but programatically instead of declaratively.
 - Due to How Visual Studio does it's builds, `its complicated to tell hey! my source code just reloaded, please use this new hash` so it is very likely that you will end up using a single bundle so no code spliting and stuff (sadface)
-- To develop the application you should be running the aurelia CLI in the background `au bluild --watch --env dev` for example and use the *Refresh Windows App* (*Ctrl+Shift+R*) button that is next to your restart application button inside visual studio
+- To develop the application you should be running the aurelia CLI in the background `au build --watch --env dev` for example and use the *Refresh Windows App* (*Ctrl+Shift+R*) button that is next to your restart application button inside visual studio
 - When you reload the app or start it, it takes a while to start. Why? I have no idea.
 
 It is not as weird setup as the WinJS or the AngularJS samples that I've put together but...
