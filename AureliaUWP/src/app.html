@@ -1,0 +1,40 @@
+<template>
+  <require from="./app.scss"></require>
+  <nav class="navbar is-primary is-fixed-bottom" role="navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" click.delegate="goHome()">
+        Aurelia UWP
+      </a>
+      <div class="navbar-burger burger ${isHamburgerActive ? 'is-active': ''}" click.delegate="handleHamburger(isHamburgerActive)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="navbar-menu ${isHamburgerActive ? 'is-active': ''}">
+      <div class="navbar-start">
+        <a repeat.for="nav of router.navigation" class="navbar-item ${nav.isActive ? 'is-active': ''}" click.delegate="navigate(nav)">${nav.title}</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="navbar-item" click.delegate="navigate('signup')">
+                Sign Up
+              </a>
+            </p>
+            <p class="control">
+
+              <a class="navbar-item" click.delegate="navigate('login')">
+                Log In
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="container is-fluid main-content">
+    <router-view></router-view>
+  </section>
+</template>

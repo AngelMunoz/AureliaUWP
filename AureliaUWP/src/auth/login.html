@@ -1,0 +1,27 @@
+﻿<template>
+  <article class="content">
+    <form submit.trigger="login()" reset.trigger="reset()" class="card">
+      <div class="card-header">
+      </div>
+      <div class="card-content">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" required placeholder="e.g. alexsmith@gmail.com" value.bind="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input" type="password" required value.bind="password">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="card-footer-item button is-dark">Log in <span class="icon"><i class="material-icons">user_account</i></span></button>
+        <button class="card-footer-item button is-dark" type="reset">Cancel</button>
+      </div>
+    </form>
+  </article>
+</template>

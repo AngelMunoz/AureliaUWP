@@ -1,0 +1,38 @@
+﻿<template>
+  <article class="content">
+    <div class="notification is-danger" if.bind="showError">
+      <button class="delete" click.delegate="hideError()"></button>
+      Please ensure passwords match!
+    </div>
+    <form submit.trigger="signup()" reset.trigger="reset()" class="card">
+      <div class="card-header">
+      </div>
+      <div class="card-content">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" required placeholder="e.g. alexsmith@gmail.com" value.bind="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input" type="password" required value.bind="password">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Please, Repeat Your Password</label>
+          <div class="control">
+            <input class="input" type="password" required value.bind="repeatPassword">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="card-footer-item button is-dark">Sign up! <span class="icon"><i class="material-icons">send</i></span></button>
+        <button class="card-footer-item button is-dark" type="reset">Cancel</button>
+      </div>
+    </form>
+  </article>
+</template>

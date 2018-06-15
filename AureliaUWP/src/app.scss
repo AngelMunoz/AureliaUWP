@@ -1,0 +1,66 @@
+﻿@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+// 2. Set your own initial variables
+$black: #000000;
+$teal: teal;
+$light_brown: #D7CCC8;
+$dark_brown: #5D4037;
+$light_teal: #B2DFDB;
+$dark_teal: #00796B;
+$orange: #FF9800;
+$green: #4CAF50;
+// 3. Set the derived variables
+$primary: $black;
+$primary-invert: findColorInvert($black);
+
+$link: $teal;
+$link-invert: findColorInvert($teal);
+
+$info: $dark_teal;
+$info-invert: findColorInvert($dark_teal);
+
+$warn: $orange;
+$warn-invert: findColorInvert($orange);
+
+$success: $green;
+$success-invert: findColorInvert($green);
+
+// 4. Setup your Custom Colors
+
+// 5. Add new color variables to the color map.
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass";
+
+
+// 6. Import the rest of Bulma
+@import "../node_modules/bulma/bulma";
+
+body {
+  padding-bottom: 70px;
+}
+
+.main-content {
+  padding-top: 10px;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(./material.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+}
