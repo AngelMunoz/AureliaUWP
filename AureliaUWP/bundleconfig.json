@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "src/lib/file-picker.min.js",
+    "inputFiles": [
+      "src/lib/file-picker.js"
+    ]
+  },
+  {
+    "outputFileName": "src/lib/playlist-helper.min.js",
+    "inputFiles": [
+      "src/lib/playlist-helper.js"
+    ]
+  },
+  {
+    "outputFileName": "src/resources/uwp-media-toolbar/uwp-media-toolbar.min.html",
+    "inputFiles": [
+      "src/resources/uwp-media-toolbar/uwp-media-toolbar.html"
+    ]
+  }
+]

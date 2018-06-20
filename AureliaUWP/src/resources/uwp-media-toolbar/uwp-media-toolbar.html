@@ -1,0 +1,48 @@
+﻿<template>
+  <nav class="navbar is-dark">
+    <header class="navbar-brand">
+      <a class="navbar-item">Song Title</a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" click.delegate="onSelectFiles()">
+        <span class="icon">
+          <i class="material-icons">library_add</i>
+        </span>
+      </a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" if.bind="readyToPlay" click.delegate="previous()">
+        <span class="icon">
+          <i class="material-icons">skip_previous</i>
+        </span>
+      </a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" if.bind="!isPlaying && readyToPlay" click.delegate="play()">
+        <span class="icon">
+          <i class="material-icons">play_arrow</i>
+        </span>
+      </a>
+      <a class="navbar-item" if.bind="isPlaying" click.delegate="pause()">
+        <span class="icon">
+          <i class="material-icons">pause</i>
+        </span>
+      </a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" if.bind="readyToPlay" click.delegate="next()">
+        <span class="icon">
+          <i class="material-icons">skip_next</i>
+        </span>
+      </a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" if.bind="readyToPlay" click.delegate="toggleShuffle()">
+        <span class="icon ${ shuffle ? 'has-text-info' : ''}">
+          <i class="material-icons">shuffle</i>
+        </span>
+      </a>
+      <!-- This is just a classic aurelia component, just bind and delegate as needed -->
+      <a class="navbar-item" if.bind="readyToPlay" click.delegate="toggleAutoRepeat()">
+        <span class="icon ${ autorepeat ? 'has-text-info' : ''}">
+          <i class="material-icons">repeat</i>
+        </span>
+      </a>
+    </header>
+  </nav>
+</template>

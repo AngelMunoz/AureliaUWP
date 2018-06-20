@@ -36,11 +36,7 @@ $success-invert: findColorInvert($green);
 @import "../node_modules/bulma/bulma";
 
 body {
-  padding-bottom: 70px;
-}
-
-.main-content {
-  padding-top: 10px;
+  margin-bottom: 100px;
 }
 
 @font-face {
