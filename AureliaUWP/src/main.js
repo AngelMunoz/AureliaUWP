@@ -1,7 +1,5 @@
 import environment from './environment';
 import { PLATFORM } from 'aurelia-pal';
-import 'core-js';
-
 
 import '../node_modules/nprogress/nprogress.css';
 

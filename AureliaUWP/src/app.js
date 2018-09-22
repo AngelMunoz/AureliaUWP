@@ -1,4 +1,4 @@
-import { PLATFORM, inject } from 'aurelia-framework'
+import { PLATFORM, inject } from 'aurelia-framework';
 import { EventAggregator } from "aurelia-event-aggregator";
 import { Router } from 'aurelia-router';
 import NProgress from "nprogress";
@@ -47,7 +47,7 @@ export class App {
   }
 
   goHome() {
-    this.router.navigate('/')
+    this.router.navigate('/');
   }
 
   /**
@@ -57,7 +57,7 @@ export class App {
    */
   navigate(route) {
     if (typeof route === 'string') {
-      return this.router.navigateToRoute(route)
+      return this.router.navigateToRoute(route);
     }
     return this.router.navigateToRoute(route.config.name);
   }

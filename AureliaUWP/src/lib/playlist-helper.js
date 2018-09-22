@@ -36,10 +36,10 @@ export class PlaylistBuilder {
       const playbackItem = new MediaPlaybackItem(MediaSource.createFromStorageFile(file));
       this._mediaPlaybackList.items.push(playbackItem);
     }
-    return this;_mediaPlaybackList
+    return this;
   }
 
-  build() {_medi_mediaPlaybackList
+  build() {
     return this._mediaPlaybackList;
   }
 
