@@ -13,7 +13,7 @@ export class PlaylistBuilder {
 
   /**
    * Add track by track from the files you had picked from the storage
-   * @param {Windows.Storage.StorageFile} track
+   * @param {Windows.Storage.StorageFile} file
    */
   addSingleTrackFromFile(file) {
     const playbackItem = new MediaPlaybackItem(MediaSource.createFromStorageFile(track))
